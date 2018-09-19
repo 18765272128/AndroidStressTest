@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">AndroidStressTest</string>
+    <string name="reboot_button">Reboot Test</string>
+    <string name="reboo_times">Setting Max Times</string>
+    <string name="reboot_delay">Set Delay Time</string>
+    <string name="reboot_clear">Clear Setting</string>
+    <string name="bt_start">Start</string>
+    <string name="bt_stop">Stop</string>
+    <string name="bt_exit">Exit</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
