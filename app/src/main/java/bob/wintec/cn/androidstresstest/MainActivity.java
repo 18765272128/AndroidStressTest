@@ -9,11 +9,15 @@ import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
     private static String TAG = "bob";
+    private DatebaseHelper mydb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.e(TAG, "In the onCreate method");
+
+        mydb = new DatebaseHelper(this,"database.db", null, 1 );
+
         replaceBtFragment(new ButtonFragment());
         replaceCtFragment(new RebootFragment());
     }
@@ -29,5 +33,9 @@ public class MainActivity extends AppCompatActivity {
         android.support.v4.app.FragmentTransaction transaction = mfragmanager.beginTransaction();
         transaction.replace(R.id.ct_fragment, mfrag);
         transaction.commit();
+    }
+
+    private void mInitDB(){
+
     }
 }

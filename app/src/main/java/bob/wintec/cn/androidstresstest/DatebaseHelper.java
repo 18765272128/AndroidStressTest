@@ -12,10 +12,11 @@ public class DatebaseHelper extends SQLiteOpenHelper {
     private Context mContext;
     public static final String CREATE_TABLE = "create table info ("
                 + "id integer primary key autoincrement, "
-                + "item text, "
+                + "item text unique, "
                 + "boolvalue real, "
                 + "numvalue integer, "
                 + "strvalue text)";
+
     public DatebaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
          super(context, name, factory, version);
          mContext = context;
@@ -23,6 +24,7 @@ public class DatebaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        db.execSQL(CREATE_TABLE);
 
     }
 
